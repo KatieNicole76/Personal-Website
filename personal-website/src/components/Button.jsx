@@ -2,7 +2,7 @@ export default function Button({ href, children, variant = "solid", className = 
   const base = "text-body2 py-1 px-2 rounded-xl inline-block text-center";
 
   const variants = {
-    solid: "bg-med-green text-gold",
+    solid: "bg-med-green text-light-gold",
     outline: "border border-gold text-gold",
   };
 

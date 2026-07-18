@@ -10,30 +10,33 @@
     --color-med-green: #557250;
     --color-dark-green: #273225;
     --color-darker-green: #141814;
+    --color-darkest-green: #00100A;
     --color-gold: #D5C9A6;
     --color-light-gold: #FEE9C5;
-    --color-black: #3A3A3A;
+    --color-black: #272727;
+    --color-black-muted: #4A4740;
+    --color-gold-muted: #B3A582;
  
 }
 
 @utility text-h1 {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 53px;
+  font-size: clamp(32px, 15vw, 53px);
   letter-spacing: 0.03em;
 }
 
 @utility text-h2 {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 24px;
+  font-size: clamp(20px, 5vw, 24px);
   letter-spacing: 0.03em;
 }
 
 @utility text-h3 {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: 18px;
+  font-size: clamp(16px, 4vw, 18px);
   letter-spacing: 0.03em;
 }
 
@@ -59,7 +62,7 @@
 @utility text-subtitle2 {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 0.18em;
 }
 

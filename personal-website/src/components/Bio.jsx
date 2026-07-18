@@ -3,7 +3,7 @@ import Button from '../components/Button';
 
 export default function Bio() {
   return (
-    <div className='bg-darker-green torn-edge p-2 flex flex-col pr-5 gap-2'>
+    <div className='bg-darkest-green torn-edge p-2 flex flex-col pr-5 gap-2'>
         <h3 className="text-h3 text-gold">Full stack developer who believes both backend 
             code and frontend design deserve to be pretty.</h3>
         <p className="text-body1 text-gold">Based in Akron, Ohio. Currently working at Westfield 

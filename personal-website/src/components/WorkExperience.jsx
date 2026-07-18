@@ -35,9 +35,9 @@ const jobs = [
 
 export default function WorkExperience() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col gap-2">
     <img alt="" className="max-h-[40px] mt-4 mb-2 px-2" src={divider} />
-    <h2 className="text-h2 text-gold mb-1">Work Experience</h2>
+    <h2 className="text-h2 text-gold mb-1 text-center">Work Experience</h2>
       {jobs.map((job) => (
         <ExperienceCard key={job.company} {...job} />
       ))}

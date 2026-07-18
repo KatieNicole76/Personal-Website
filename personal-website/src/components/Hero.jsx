@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="flex flex-col leading-none absolute top mt-2">
             <h1 className="text-h1 text-gold">Hi, I'm<br />Katie</h1>
             <p className="text-h3 text-gold mt-2">Software Engineer</p>
-            <div className='flex flex-row gap-2 mt-1'>
+            <div className='flex flex-row gap-2 mt-1 flex-wrap'>
             <a href="https://linkedin.com/in/katiekaiser17" aria-label="LinkedIn">
                 <img src={linkedin} alt="" className="max-h-[18px]" />
             </a>
@@ -21,7 +21,7 @@ export default function Hero() {
             </a>
             </div>
         </div>
-        <img src={photo} alt="Profile Picture" className="max-h-[400px] ml-auto mt-4"/>
+        <img src={photo} alt="Profile Picture" className="w-[70vw] max-w-[412px] h-auto ml-auto mt-4"/>
     </div>
   );
 }

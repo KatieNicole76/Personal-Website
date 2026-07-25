@@ -1,9 +1,9 @@
-
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
-export default function ExperienceCard({ company, dates, role, bullets, variant = "dark", className = "" }) {
+export default function ExperienceCard({ company, dates, role, bullets = [], variant = "dark", className = "" }) {
     const [isOpen, setIsOpen] = useState(true);
+    const hasBullets = bullets.length > 0;
     const base = "torn-edge p-2";
     const variants = {
         dark: "bg-darkest-green text-gold",
@@ -18,21 +18,34 @@ export default function ExperienceCard({ company, dates, role, bullets, variant 
         light: "text-black-muted",
     };
 
+  const header = (
+    <div className="flex items-center justify-between">
+        <h3 className="text-h3">{company}</h3>
+        <div className="flex items-center gap-2">
+            <p className={`text-body2 ${muted_colors[variant]}`}>{dates}</p>
+            {hasBullets && (
+                <ChevronDown size={20} className={`${caretColor[variant]} transition-transform ${isOpen ? "rotate-180" : ""}`}/>
+            )}
+        </div>
+    </div>
+  );
+
   return (
     <div className={`${base} ${variants[variant]} ${className}`}>
-        <button onClick={() => setIsOpen(!isOpen)} className="w-full text-left">
-            <div className="flex items-center justify-between">
-                <h3 className="text-h3">{company}</h3>
-                <div className="flex items-center gap-2">
-                    <p className="text-body2 ${muted_colors[variant]}">{dates}</p>
-                    <ChevronDown size={20} className={`${caretColor[variant]} transition-transform ${isOpen ? "rotate-180" : ""}`}/>
-                </div>
+        {hasBullets ? (
+            <button onClick={() => setIsOpen(!isOpen)} className="w-full text-left">
+                {header}
+                <p className="text-body2 italic">{role}</p>
+            </button>
+        ) : (
+            <div className="w-full text-left">
+                {header}
+                <p className="text-body2 italic">{role}</p>
             </div>
-            <p className="text-body2 italic">{role}</p>
-        </button>
+        )}
 
-        {isOpen && ( <>
-            <ul className="text-body1">
+        {hasBullets && isOpen && (
+            <ul className="text-body1 mt-2">
                 {bullets.map((bullet, i) => (
                 <li key={i} className="flex mb-1">
                     <p className={`${muted_colors[variant]}`}>•</p>
@@ -40,7 +53,6 @@ export default function ExperienceCard({ company, dates, role, bullets, variant 
                 </li>
                 ))}
             </ul>
-            </>
         )}
     </div>
 );

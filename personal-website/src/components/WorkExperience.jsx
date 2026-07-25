@@ -1,5 +1,7 @@
 import ExperienceCard from "./ExperienceCard";
 import divider from '../assets/divider.png';
+import moths from '../assets/moths.png';
+import star4 from '../assets/star-4.png';
 
 const jobs = [
   {
@@ -7,13 +9,13 @@ const jobs = [
     dates: "Jan 23 - Now",
     role: "Software Engineer",
     bullets: [
-        "Delivered ~20 story points per sprint on average, roughly double the team average of ~10, while maintaining high code quality and low defect rates.",
-        "Selected for a competitive Technical Leadership Growth Group, one of a small group chosen by leadership based on performance and work ethic.", 
-        "Mentored a summer intern on development best practices, code review standards, and project execution.", 
-        "Played a key role in migrating core integration infrastructure from MuleSoft to Java Spring Boot and Gravitee, improving system reliability and maintainability.",
-        "Designed and implemented new RESTful API integrations, using Postman for testing and validation.",
-        "Collaborated within a 7-developer team on a large Agile Release Train (ART), using Jira for sprint planning and tracking, Git for version control, and full participation in Scrum ceremonies.", 
-        "Built an event-driven GenAI pipeline (Python, ChatGPT API, Kafka, Spring Boot/Gravitee) that automatically summarizes claims documents from FileNet and displays them in ClaimCenter, reducing manual review time for adjusters." 
+        <>Delivered ~20 story points per sprint on average, roughly double the team average of ~10, while maintaining high code quality and low defect rates.</>,
+        <>Selected for a competitive <strong className="font-bold">Technical Leadership Growth Group</strong>, one of a small group chosen by leadership based on performance and work ethic.</>,
+        <><strong className="font-bold">Mentored</strong> a summer intern on development best practices, code review standards, and project execution.</>,
+        <>Played a key role in migrating core integration infrastructure from <strong className="font-bold">MuleSoft</strong> to <strong className="font-bold">Java Spring Boot</strong> and <strong className="font-bold">Gravitee,</strong> improving system reliability and maintainability.</>,
+        <>Designed and implemented new <strong className="font-bold">RESTful API integrations,</strong> using <strong className="font-bold">Postman</strong> for testing and validation.</>,
+        <>Collaborated within a 7-developer team on a large <strong className="font-bold">Agile Release Train (ART),</strong> using <strong className="font-bold">Jira</strong> for sprint planning and tracking, <strong className="font-bold">Git</strong> for version control, and full participation in <strong className="font-bold">Scrum</strong> ceremonies.</>,
+        <>Built an event-driven <strong className="font-bold">GenAI</strong> pipeline <strong className="font-bold">(Python, ChatGPT API, Kafka, Spring Boot/Gravitee)</strong> that automatically summarizes claims documents from FileNet and displays them in ClaimCenter, reducing manual review time for adjusters.</>,
     ],
     variant: "light"
   },
@@ -22,12 +24,12 @@ const jobs = [
     dates: "July 21 - Jan 23",
     role: "Software Engineer & Designer",
     bullets: [
-        "Built backend features in Django to integrate with third-party LMS platforms (Blackboard, Canvas, D2L), calling external APIs and persisting data into a SQL database.",
-        "Implemented customer feedback to enhance product features, resulting in a 3x increase in sales within one year.",
-        "Worked with AWS storage services to support data handling for these integrations.",
-        "Led the redesign of user interfaces using Figma, ensuring full  ADA accessibility and mobile responsiveness.",
-        "Managed design files and contributed to a cohesive design system used across all company products.",
-        "Collaborated with front-end developers to build reusable components, streamlining development."
+      <>Built backend features in <strong className="font-bold">Django/Python</strong> to integrate with third-party LMS platforms, calling external <strong className="font-bold">APIs</strong> and persisting data into a <strong className="font-bold">SQL</strong> database.</>,
+      "Implemented customer feedback to enhance product features, resulting in a 3x increase in sales within one year.",
+      <>Worked with <strong className="font-bold">AWS</strong> storage services to support data handling for these integrations.</>,
+      <>Led the redesign of user interfaces using <strong className="font-bold">Figma</strong>, ensuring full ADA accessibility and mobile responsiveness.</>,
+      "Managed design files and contributed to a cohesive design system used across all company products.",
+      <>Collaborated with front-end developers to build reusable components using <strong className="font-bold">JavaScript, JQuery, HTML, CSS</strong>, streamlining development.</>,
     ],
     variant: "dark"
   },
@@ -35,12 +37,15 @@ const jobs = [
 
 export default function WorkExperience() {
   return (
-    <div className="flex flex-col gap-2">
-    <img alt="" className="max-h-[40px] mt-4 mb-2 px-2" src={divider} />
-    <h2 className="text-h2 text-gold mb-1 text-center">Work Experience</h2>
-      {jobs.map((job) => (
-        <ExperienceCard key={job.company} {...job} />
-      ))}
+    <div className="relative">
+      <img alt="" className="max-h-[100px] absolute top-10 right-2" src={moths}/>
+      <div className="flex flex-col gap-2">
+        <img alt="" className="max-h-[40px] mt-6 px-2" src={divider} />
+        <h2 className="text-h2 text-gold mb-1 text-center">Work Experience</h2>
+        {jobs.map((job) => (
+          <ExperienceCard key={job.company} {...job} />
+        ))}
+      </div>
     </div>
   );
 }

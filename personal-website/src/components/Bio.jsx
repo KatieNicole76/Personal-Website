@@ -1,9 +1,11 @@
 import smallestStar from '../assets/smallest-star.png';
 import Button from '../components/Button';
 
-export default function Bio() {
+//takes in edge to show the jagged sides either on all or just top/bottom
+export default function Bio({ edge = 'all', className = '' }) {
+  const edgeClass = edge === 'y' ? 'torn-edge-y px-3 py-3' : 'torn-edge-all p-2 pr-5';
   return (
-    <div className='bg-darkest-green torn-edge p-2 flex flex-col pr-5 gap-2'>
+    <div className={`bg-darkest-green ${edgeClass} flex flex-col gap-2 ${className}`}>
         <h3 className="text-h3 text-gold">Full stack developer who believes both backend 
             code and frontend design deserve to be pretty.</h3>
         <p className="text-body1 text-gold">Based in Akron, Ohio. Currently working at Westfield 

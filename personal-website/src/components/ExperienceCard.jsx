@@ -4,7 +4,7 @@ import { ChevronDown } from "lucide-react";
 export default function ExperienceCard({ company, dates, role, bullets = [], variant = "dark", className = "" }) {
     const [isOpen, setIsOpen] = useState(true);
     const hasBullets = bullets.length > 0;
-    const base = "torn-edge p-2";
+    const base = "torn-edge-y p-2";
     const variants = {
         dark: "bg-darkest-green text-gold",
         light: "bg-gold text-black",

@@ -10,9 +10,9 @@ export default function Bio({ edge = 'all', className = '' }) {
             code and frontend design deserve to be pretty.</h3>
         <p className="text-body1 text-gold">Based in Akron, Ohio. Currently working at Westfield 
             Insurance with 5 years of experience.</p>
-        <div className="flex flex row items-center gap-1 mt-2">
+        <div className="flex flex row items-center gap-2 mt-2">
             <img src={smallestStar} alt="" className="max-h-[20px]"/>
-            <p className='text-gold text-subtitle2 w-[120px] text-center'>Open to new opportunities</p>
+            <p className='text-gold text-subtitle2 text-center'>Open to new <br /> opportunities</p>
             <img src={smallestStar} alt="" className="max-h-[20px]"/>
         </div>
         <div className='flex flex-row gap-3 mt-2'>

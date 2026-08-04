@@ -14,7 +14,7 @@
   --color-darker-green: #141814;
   --color-darkest-green: #00100A;
   --color-gold: #D5C9A6;
-  --color-light-gold: #FEE9C5;
+  --color-light-gold: #FEE9C5;  
   --color-black: #272727;
   --color-black-muted: #4A4740;
   --color-gold-muted: #B3A582;
@@ -23,48 +23,48 @@
 
 @utility text-h1 {
   font-family: var(--font-serif);
-  font-weight: 400;
+  font-weight: 550;
   font-size: clamp(32px, 15vw, 90px);
   letter-spacing: 0.03em;
 }
 
 @utility text-h2 {
   font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: clamp(20px, 5vw, 32px);
+  font-weight: 550;
+  font-size: clamp(20px, 7vw, 40px);
   letter-spacing: 0.03em;
 }
 
 @utility text-h3 {
   font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: clamp(16px, 4vw, 24px);
+  font-weight: 580;
+  font-size: clamp(16px, 6vw, 32px);
   letter-spacing: 0.03em;
 }
 
 @utility text-body1 {
   font-family: var(--font-serif);
-  font-weight: 300;
-  font-size: 16px;
+  font-weight: 400;
+  font-size: clamp(16px, 4vw, 24px);
 }
 
 @utility text-body2 {
   font-family: var(--font-serif);
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: clamp(16px, 3vw, 24px);
 }
 
 @utility text-subtitle {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 18px;
+  font-size: clamp(18px, 3vw, 24px);
   letter-spacing: 0.23em;
 }
 
 @utility text-subtitle2 {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: 12px;
+  font-size: clamp(14px, 2vw, 16px);
   letter-spacing: 0.18em;
 }
 

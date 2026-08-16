@@ -24,34 +24,34 @@
 @utility text-h1 {
   font-family: var(--font-serif);
   font-weight: 550;
-  font-size: clamp(32px, 15vw, 90px);
+  font-size: clamp(30px, 15vw, 85px);
   letter-spacing: 0.03em;
 }
 
 @utility text-h2 {
   font-family: var(--font-serif);
   font-weight: 550;
-  font-size: clamp(20px, 7vw, 40px);
+  font-size: clamp(20px, 7vw, 38px);
   letter-spacing: 0.03em;
 }
 
 @utility text-h3 {
   font-family: var(--font-serif);
   font-weight: 580;
-  font-size: clamp(16px, 6vw, 32px);
+  font-size: clamp(12px, 3vw, 26px);
   letter-spacing: 0.03em;
 }
 
 @utility text-body1 {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(16px, 4vw, 24px);
+  font-size: clamp(16px, 3vw, 24px);
 }
 
 @utility text-body2 {
   font-family: var(--font-serif);
   font-weight: 500;
-  font-size: clamp(16px, 3vw, 24px);
+  font-size: clamp(16px, 2vw, 24px);
 }
 
 @utility text-subtitle {

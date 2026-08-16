@@ -14,6 +14,7 @@ export const projects = [
         "I used this as an opportunity to build my first React app, and connected it to MongoDB to store the information. I used Figma for the website design and all of the graphics I needed for the wedding."
     ],
     image: weddingAppImg,
+    imageClass: "rounded max-h-[500px] object-contain",
     buttonText: "View Website →",
     buttonHref: "https://katieanddanny.netlify.app"
     },
@@ -27,6 +28,7 @@ export const projects = [
         "The software captured where people looked and how long each task took, giving us a clear picture of what worked and what didn't. We turned those findings into concrete, data backed recommendations that helped the library make their site more user friendly."
     ],
     image: uxResearchImg,
+    imageClass: "rounded max-h-[500px] object-contain",
     buttonText: "More Info →",
     buttonHref: "https://uxcenter.bw.edu/"
     },
@@ -39,6 +41,7 @@ export const projects = [
         "I was going to be involved in a study abroad group to help the team get up in running in Guatemala and teach them how to use the software but unfortunately Covid had other plans for me. A few years later a new team of seniors was able to go down and deliver the software to them, and I’m happy to know I made an impact on this charity."
     ],  
     image: missionGuatemalaImg,
+    imageClass: "rounded max-h-[200px] object-contain",
     buttonText: "More Info →",
     buttonHref: "https://www.bw.edu/news/2023/spring/05-bw-faculty-students-travel-to-guatemala-to-bring-tech-to-medical-records-system"
     },
@@ -50,6 +53,7 @@ export const projects = [
         "I was recommended by a professor to be recognized in Baldwin Wallace's STEM Student Spotlight. It's a simple form of recognition, but having a professor I worked closely with on multiple projects choose to highlight me like that meant a lot, and it helped quiet some of my imposter syndrome along the way."
     ],
     image: stemSpotlightImg,
+    imageClass: "rounded max-h-[600px] object-contain mt-5",
     buttonText: null,
     buttonHref: null
     }

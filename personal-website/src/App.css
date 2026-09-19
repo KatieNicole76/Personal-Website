@@ -3,6 +3,7 @@
 @theme {
   --spacing: 8px; 
   --font-serif: "Cormorant", serif;
+  --font-serif-body: "Cormorant Garamond", serif;
   --font-sans: "Inter", sans-serif;
 
   --breakpoint-*: initial;  
@@ -18,7 +19,41 @@
   --color-black: #272727;
   --color-black-muted: #4A4740;
   --color-gold-muted: #B3A582;
+  --color-glow: #F5DCA8;
 
+  --animate-twinkle: twinkle 3.6s ease-in-out infinite;
+  --animate-moon-glow: moon-glow 8s linear infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    filter: brightness(1) drop-shadow(0 0 0px transparent);
+  }
+  50% {
+    filter: brightness(1.6) drop-shadow(0 0 4px var(--color-glow)) hue-rotate(8deg);
+  }
+}
+
+@keyframes moon-glow {
+  0% {
+    filter: drop-shadow(5px -3px 7px var(--color-light-gold)) drop-shadow(-2px 2px 12px var(--color-light-gold));
+  }
+  25% {
+    filter: drop-shadow(-3px -5px 7px var(--color-light-gold)) drop-shadow(2px 3px 12px var(--color-light-gold));
+  }
+  50% {
+    filter: drop-shadow(-5px 3px 7px var(--color-light-gold)) drop-shadow(2px -2px 12px var(--color-light-gold));
+  }
+  75% {
+    filter: drop-shadow(3px 5px 7px var(--color-light-gold)) drop-shadow(-2px -3px 12px var(--color-light-gold));
+  }
+  100% {
+    filter: drop-shadow(5px -3px 7px var(--color-light-gold)) drop-shadow(-2px 2px 12px var(--color-light-gold));
+  }
+}
+
+@utility glow-constant {
+  filter: drop-shadow(0 0 6px var(--color-light-gold)) drop-shadow(0 0 14px var(--color-light-gold));
 }
 
 @utility text-h1 {
@@ -43,14 +78,14 @@
 }
 
 @utility text-body1 {
-  font-family: var(--font-serif);
-  font-weight: 400;
+  font-family: var(--font-serif-body);
+  font-weight: 500;
   font-size: clamp(16px, 3vw, 24px);
 }
 
 @utility text-body2 {
-  font-family: var(--font-serif);
-  font-weight: 500;
+  font-family: var(--font-serif-body);
+  font-weight: 600;
   font-size: clamp(16px, 2vw, 24px);
 }
 
@@ -65,6 +100,13 @@
   font-family: var(--font-sans);
   font-weight: 700;
   font-size: clamp(14px, 2vw, 16px);
+  letter-spacing: 0.18em;
+}
+
+@utility text-subtitle3 {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: clamp(12px, 2vw, 16px);
   letter-spacing: 0.18em;
 }
 

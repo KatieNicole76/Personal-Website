@@ -1,7 +1,10 @@
 import ExperienceCard from "./ExperienceCard";
 import Divider from "./Divider";
 import moths from '../assets/moths.png';
-import star4 from '../assets/star-4.png';
+import starLarge from '../assets/star-large.png';
+import starSmall from '../assets/star-small.svg';
+import starDot from '../assets/star-dot.png';
+import TwinkleStar from './TwinkleStar';
 
 const jobs = [
   {
@@ -40,6 +43,11 @@ export default function WorkExperience() {
   return (
     <div className="relative">
       <img alt="" className="max-h-[100px] absolute top-12 right-2" src={moths}/>
+      <TwinkleStar src={starLarge} className="absolute max-h-[32px] top-2 left-3 -z-10" />
+      <TwinkleStar src={starSmall} className="absolute max-h-[14px] top-1 left-16 -z-10" />
+      <TwinkleStar src={starDot} className="absolute max-h-[8px] top-9 left-9 -z-10" />
+      <TwinkleStar src={starDot} className="absolute max-h-[6px] top-0 left-24 -z-10" />
+      <TwinkleStar src={starDot} className="absolute max-h-[7px] top-14 left-1 -z-10" />
       <div className="flex flex-col gap-2">
         <Divider />
         <h2 className="text-h2 text-gold mb-1 text-center">Work Experience</h2>

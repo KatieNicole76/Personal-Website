@@ -1,6 +1,7 @@
 import ExperienceCard from "./ExperienceCard";
 import Divider from "./Divider";
 import star5 from '../assets/star-5.png';
+import useTwinkleTiming from '../hooks/useTwinkleTiming';
 
 
 const jobs = [
@@ -14,11 +15,12 @@ const jobs = [
 ];
 
 export default function Education() {
+  const timing = useTwinkleTiming();
   return (
     <div className="relative mb-10">
       <div className="flex flex-col gap-2">
         <Divider />
-        <img alt="" className="max-h-[150px] absolute top-10 left-3" src={star5}/>
+        <img alt="" className="max-h-[150px] absolute top-10 left-3 motion-safe:animate-twinkle" style={timing} src={star5}/>
         <h2 className="text-h2 text-gold mb-1 text-center">Education</h2>
         {jobs.map((job) => (
           <ExperienceCard key={job.company} {...job} />

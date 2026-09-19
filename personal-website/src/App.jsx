@@ -1,8 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import logo from './assets/logo.png';
-import star1 from './assets/star-1.png';
-import crane from './assets/crane.png';
-
 
 import Hero from './components/Hero';
 import WorkExperience from './components/WorkExperience';
@@ -25,14 +22,10 @@ function Home() {
 function App() {
   return (
     <div>
-      <div className="flex flex-row justify-between items-center mt-2 mr-1">
+      <div className="flex flex-row items-center mt-2 mr-1">
         <Link to="/">
           <img alt="Home Button" className="max-h-[19px] mt-1 ml-2" src={logo} />
         </Link>
-        <div className="flex flex-row gap-1 items-center justify-center">
-          <img alt="Home Button" className="max-h-[19px]" src={crane} />
-          <p className="text-subtitle2 text-gold">Site Under Construction</p>
-        </div>
       </div>
 
       <Routes>

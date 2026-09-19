@@ -40,7 +40,7 @@ export const projects = [
         ],
         imageClass: "rounded-xl max-h-[520px] object-contain",
         buttons: [
-            { text: "Try the Live Demo →", href: "https://katiesrecipeapp.netlify.com", variant: "solid" },
+            { text: "Try the Live Demo →", href: "https://katiesrecipebook.netlify.app/", variant: "solid" },
             { text: "View Code →", href: "https://github.com/KatieNicole76/Recipe-Book", variant: "outline" },
         ],
     },

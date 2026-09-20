@@ -59,8 +59,10 @@ export const projects = [
         ],
         image: weddingAppImg,
         imageClass: "rounded max-h-[500px] object-contain",
-        buttonText: "View Website →",
-        buttonHref: "https://katieanddanny.netlify.app"
+        buttons: [
+            { text: "View Website →", href: "https://katieanddanny.netlify.app", variant: "solid" },
+            { text: "View Code →", href: "https://github.com/KatieNicole76/Wedding", variant: "outline" },
+        ],
     },
     {
         slug: "uxui-research-group",

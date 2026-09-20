@@ -20,7 +20,7 @@ export default function ExperienceCard({ company, dates, role, bullets = [], var
 
   const header = (
     <div className="flex items-center justify-between">
-        <h3 className="text-h3">{company}</h3>
+        <h3 className="text-h3 [font-weight:700]">{company}</h3>
         <div className="flex items-center gap-2">
             <p className={`text-body2 ${muted_colors[variant]}`}>{dates}</p>
             {hasBullets && (

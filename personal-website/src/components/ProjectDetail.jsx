@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from "react-router-dom";
 import { projects } from "../data/projectsData";
 import Button from "../components/Button";
+import Carousel from "../components/Carousel";
 import starLarge from '../assets/star-large.png';
 import starSmall from '../assets/star-small.svg';
 import starDot from '../assets/star-dot.png';
@@ -13,7 +14,7 @@ function TechStack({ techStack }) {
       {techStack.map((tech) => (
         <span
           key={tech}
-          className="bg-darkest-green text-gold-muted text-subtitle3 py-1 px-2 rounded-xl mt-2 ml-0.5">
+          className="bg-darkest-green text-gold-muted text-subtitle3 py-1 px-2 rounded-xl mt-2">
           {tech}
         </span>
       ))}
@@ -24,7 +25,7 @@ function TechStack({ techStack }) {
 function Features({ features }) {
   if (!features?.length) return null;
   return (
-    <ul className="[font-family:var(--font-serif-body)] font-medium text-[15px] md:text-[18px] mt-3 ml-3 flex flex-col gap-1">
+    <ul className="[font-family:var(--font-serif-body)] font-medium text-[15px] md:text-[18px] mt-2 ml-3 flex flex-col gap-1">
       {features.map((feature, i) => (
         <li key={i} className="flex">
           <p className="text-gold-muted">•</p>
@@ -35,26 +36,10 @@ function Features({ features }) {
   );
 }
 
-function ImageGallery({ images, imageClass }) {
-  if (!images?.length) return null;
-  return (
-    <div className="flex flex-row gap-2 mt-3 overflow-x-auto snap-x snap-mandatory pb-2 -mx-2 px-2">
-      {images.map((img, i) => (
-        <img
-          key={i}
-          src={img.src}
-          alt={img.alt}
-          className={`snap-center shrink-0 ${imageClass}`}
-        />
-      ))}
-    </div>
-  );
-}
-
 function Buttons({ buttons }) {
   if (!buttons?.length) return null;
   return (
-    <div className="flex flex-row flex-wrap gap-2 mt-5 justify-center">
+    <div className="flex flex-row flex-wrap gap-2 mt-9 justify-center">
       {buttons.map((btn) => (
         <Button
           key={btn.text}
@@ -79,12 +64,44 @@ export default function ProjectDetail() {
 
   return (
     <div className="relative p-2 flex flex-col text-gold mb-6">
-      <TwinkleStar src={starLarge} className="absolute max-h-[28px] top-2 right-4 -z-10" />
+      {/* bright accent stars */}
+      <TwinkleStar src={starLarge} className="absolute max-h-[40px] top-2 right-4 -z-10" />
       <TwinkleStar src={starSmall} className="absolute max-h-[14px] top-10 right-16 -z-10" />
-      <TwinkleStar src={starDot} className="absolute max-h-[7px] top-0 right-20 -z-10" />
-      <TwinkleStar src={starLarge} className="absolute max-h-[18px] top-6 left-2 -z-10" />
-      <TwinkleStar src={starSmall} className="absolute max-h-[10px] top-0 left-12 -z-10" />
-      <TwinkleStar src={starDot} className="absolute max-h-[6px] top-11 left-8 -z-10" />
+      <TwinkleStar src={starDot} className="absolute max-h-[20px] top-0 right-20 -z-10" />
+      <TwinkleStar src={starLarge} className="absolute h-[30px] top-8 left-2 -z-10" />
+      <TwinkleStar src={starSmall} className="absolute max-h-[20px] top-0 left-12 -z-10" />
+      <TwinkleStar src={starDot} className="absolute max-h-[20px] top-11 left-8 -z-10" />
+      <TwinkleStar src={starDot} className="absolute max-h-[7px] top-11 right-50 -z-10" />
+      <TwinkleStar src={starSmall} className="absolute max-h-[25px] top-0 left-40 -z-10" />
+      <TwinkleStar src={starSmall} className="absolute max-h-[18px] top-16 left-32 -z-10" />
+      <TwinkleStar src={starLarge} className="absolute max-h-[22px] top-20 right-8 -z-10" />
+      <TwinkleStar src={starDot} className="absolute max-h-[8px] top-24 left-6 -z-10" />
+
+      {/* dim, far-off background stars */}
+      <TwinkleStar src={starDot} className="absolute max-h-[6px] top-4 left-24 -z-10 opacity-50" />
+      <TwinkleStar src={starDot} className="absolute max-h-[5px] top-20 right-28 -z-10 opacity-50" />
+      <TwinkleStar src={starSmall} className="absolute max-h-[10px] top-28 right-4 -z-10 opacity-50" />
+      <TwinkleStar src={starDot} className="absolute max-h-[6px] top-1 right-32 -z-10 opacity-50" />
+      <TwinkleStar src={starDot} className="absolute max-h-[7px] top-14 left-20 -z-10 opacity-50" />
+      <TwinkleStar src={starSmall} className="absolute max-h-[9px] top-2 left-0 -z-10 opacity-50" />
+      <TwinkleStar src={starDot} className="absolute max-h-[5px] top-32 left-10 -z-10 opacity-50" />
+
+      {/* middle stars — % positions so they land mid-page no matter how long the content runs */}
+      <TwinkleStar src={starLarge} className="absolute max-h-[26px] top-1/3 left-2 -z-10" />
+      <TwinkleStar src={starSmall} className="absolute max-h-[16px] top-[38%] right-6 -z-10" />
+      <TwinkleStar src={starDot} className="absolute max-h-[7px] top-[36%] left-1/2 -z-10 opacity-50" />
+      <TwinkleStar src={starDot} className="absolute max-h-[6px] top-1/2 right-3 -z-10 opacity-50" />
+      <TwinkleStar src={starSmall} className="absolute max-h-[12px] top-[52%] left-6 -z-10 opacity-50" />
+      <TwinkleStar src={starDot} className="absolute max-h-[8px] top-[46%] right-1/3 -z-10" />
+
+      {/* bottom stars — anchored to the container's bottom edge, behind the buttons */}
+      <TwinkleStar src={starLarge} className="absolute max-h-[24px] bottom-24 right-6 -z-10" />
+      <TwinkleStar src={starSmall} className="absolute max-h-[14px] bottom-32 left-4 -z-10" />
+      <TwinkleStar src={starDot} className="absolute max-h-[7px] bottom-16 left-1/3 -z-10 opacity-50" />
+      <TwinkleStar src={starDot} className="absolute max-h-[6px] bottom-4 right-1/4 -z-10 opacity-50" />
+      <TwinkleStar src={starSmall} className="absolute max-h-[10px] bottom-8 right-10 -z-10 opacity-50" />
+      <TwinkleStar src={starDot} className="absolute max-h-[5px] bottom-40 right-2 -z-10 opacity-50" />
+
       <div className="flex">
         <Link to="/projects" className="text-subtitle2 text-gold mr-auto mt-2">
           ← Projects
@@ -105,7 +122,7 @@ export default function ProjectDetail() {
       <Features features={project.features} />
 
       {project.images ? (
-        <ImageGallery images={project.images} imageClass={project.imageClass} />
+        <Carousel images={project.images} imageClassName={project.imageClass} className="mt-8" />
       ) : (
         project.image && (
           <img src={project.image} alt={project.title} className={`mt-3 ${project.imageClass}`} />
@@ -120,7 +137,7 @@ export default function ProjectDetail() {
               variant="solid" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="mt-5 max-w-[400px] self-center">
+              className="mt-9 max-w-[400px] self-center">
             {project.buttonText}
           </Button>
         )
